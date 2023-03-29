@@ -57,7 +57,25 @@ Create a list of missing S3 restore events:
      
 
 _**Here is the Command to run the code for restoring an object from the async classes or tiers is  - 
-restoreS3AsyncObjectRestore.py bucketname prefix/key SNSArn expirationDays . Ex: restoreS3Object.py s3bucket nothingtoseehere/nothing.csv0030part00 arn:aws:sns:us-east-1:123456789123:restore 2. Expiration days parameter is optional. If you don't provide Expiration days and object happens to be in S3 Glacier classes, the code will restore the object from the Glacier class for 30 days.**_
+
+py .\restoreS3AsyncObjectRestore.py                                                              
+usage: restoreS3AsyncObjectRestore.py [-h] -b  -k  -s  [-e]
+
+py .\restoreS3AsyncObjectRestore.py -h
+usage: restoreS3AsyncObjectRestore.py [-h] -b  -k  -s  [-e]
+
+Restoring objects from the S3 Async Storage
+
+options:
+  -h, --help            show this help message and exit
+  -b , --BucketName     Bucket Name
+  -k , --Key            prefix/key or key
+  -s , --SNSArn         SNS Arn
+  -e , --ExpirationDays
+                        Expiration in Days is optional
+py .\restoreS3AsyncObjectRestore.py -b 's3.outbound.data' -k 'nothing_to_see_here/nothing.csv0110_part_00' -s 'arn:aws:sns:us-east-2:822571775406:snsTest:a616ee10-de3a-4d65-bc54-5c0d5b8b072c' -e 2
+
+If you don't provide Expiration days (-e) and object happens to be in S3 Glacier classes, the code will restore the object from the Glacier class for 30 days.**_
 
 
 
