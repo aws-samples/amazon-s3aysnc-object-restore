@@ -56,7 +56,7 @@ Create a list of missing S3 restore events:
 2. if Topic Configuration does not exist, add new topic Configuration with the S3 restore event from the list and keep the rest of the S3 event policy unchanged.   
      
 
-**Here is the Command to run the code for restoring an object from the async classes or tiers is  - 
+**Here is the Command to run the code for restoring an object from the async classes or tiers is  -** 
 
 py .\restoreS3AsyncObjectRestore.py                                                              
 usage: restoreS3AsyncObjectRestore.py [-h] -b  -k  -s  [-e]
@@ -75,7 +75,7 @@ options:
                         Expiration in Days is optional
 py .\restoreS3AsyncObjectRestore.py -b 's3.outbound.data' -k 'nothing_to_see_here/nothing.csv0110_part_00' -s 'arn:aws:sns:us-east-2:822571775406:snsTest:a616ee10-de3a-4d65-bc54-5c0d5b8b072c' -e 2
 
-If you don't provide Expiration days (-e) and object happens to be in S3 Glacier classes, the code will restore the object from the Glacier class for 30 days.**
+**If you don't provide Expiration days (-e) and object happens to be in S3 Glacier classes, the code will restore the object from the Glacier class for 30 days.**
 
 
 
