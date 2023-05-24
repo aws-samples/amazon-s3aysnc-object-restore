@@ -29,7 +29,7 @@ Here is how the code works to restore an object from the S3 object from S3 Async
     **For S3 Glacier GFR/GDA** - 
 
         No. of arguments required - Bucket name, Prefix/key, SNSArn and expirationDays 
-        ExpirationDays is an optional argument. If not provided, it is set to 30 days. 
+        ExpirationDays is an optional argument. If not provided, it is set to 7 days. 
 
             If storage class == DEEP_ARCHIVE or GLACIER, check x-amz-restore
 
@@ -75,7 +75,7 @@ options:
                         Expiration in Days is optional
 py .\restoreS3AsyncObjectRestore.py -b 's3.outbound.data' -k 'nothing_to_see_here_todo/nothing.csv0110_part_00' -s 'arn:aws:sns:us-east-2:82257177xxxx:snsTest:a616ee10-de3a-4d65-bc54-5c0d5b8b072c' -e 2
 
-**If you don't provide Expiration days (-e) and object happens to be in S3 Glacier classes, the code will restore the object from the Glacier class for 30 days.**
+**If you don't provide Expiration days (-e) and object happens to be in S3 Glacier classes, the code will restore the object from the Glacier class for 7 days.**
 
 
 
