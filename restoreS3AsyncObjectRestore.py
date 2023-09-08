@@ -191,7 +191,7 @@ def headObject(bucketName, key):
         #fifth argument is optional
         #if no. of args are 4, setting expirationDays = 7 as a default value.
         if expirationDays is None :
-            expirationinDays = 7
+            expirationinDays = 1
             logger.info(f"Object is in Glacier storage class, since you have not provided the expiration days, setting it '{expirationinDays}' days")
         else:
             expirationinDays = expirationDays
