@@ -75,7 +75,7 @@ options:
                         Expiration in Days is optional
 py .\restoreS3AsyncObjectRestore.py -b 's3.outbound.data' -k 'nothing_to_see_here_todo/nothing.csv0110_part_00' -s 'arn:aws:sns:us-east-2:82257177xxxx:snsTest:a616ee10-de3a-4d65-bc54-5c0d5b8b072c' -e 2
 
-**If you don't provide Expiration days (-e) and object happens to be in S3 Glacier classes, the code will restore the object from the Glacier class for 7 days.**
+**If you don't provide Expiration days (-e) and object happens to be in S3 Glacier classes, the code will restore the object from the Glacier class for 1 days.**
 
 
 
