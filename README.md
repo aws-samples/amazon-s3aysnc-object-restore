@@ -29,7 +29,7 @@ Here is how the code works to restore an object from the S3 object from S3 Async
     **For S3 Glacier GFR/GDA** - 
 
         No. of arguments required - Bucket name, Prefix/key, SNSArn and expirationDays 
-        ExpirationDays is an optional argument. If not provided, it is set to 7 days. 
+        ExpirationDays is an optional argument. If not provided, it is set to 1 days. 
 
             If storage class == DEEP_ARCHIVE or GLACIER, check x-amz-restore
 
