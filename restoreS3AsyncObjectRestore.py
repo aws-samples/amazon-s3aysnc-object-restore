@@ -189,7 +189,7 @@ def headObject(bucketName, key):
     elif (response['StorageClass'] == "DEEP_ARCHIVE" or response['StorageClass'] == "GLACIER") and restoreStatus is None:
         #No.of args required to restore object from Glacier are 5. 
         #fifth argument is optional
-        #if no. of args are 4, setting expirationDays = 7 as a default value.
+        #if no. of args are 4, setting expirationDays = 1 as a default value.
         if expirationDays is None :
             expirationinDays = 1
             logger.info(f"Object is in Glacier storage class, since you have not provided the expiration days, setting it '{expirationinDays}' days")
