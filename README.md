@@ -56,6 +56,11 @@ Create a list of missing S3 restore events:
 2. if Topic Configuration does not exist, add new topic Configuration with the S3 restore event from the list and keep the rest of the S3 event policy unchanged.   
      
 
+**Workflow**
+
+![Workflow](./images/archive_storage_tiers.png)
+
+
 **Here is the Command to run the code for restoring an object from the async classes or tiers is  -** 
 
 py .\restoreS3AsyncObjectRestore.py                                                              
